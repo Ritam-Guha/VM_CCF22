@@ -4,8 +4,8 @@ import pickle
 
 
 app = Flask(__name__)
-model = pickle.load(open('randomForestRegressor.pkl','rb'))
-
+# model = pickle.load(open('randomForestRegressor.pkl','rb'))
+model = None
 
 @app.route('/')
 def home():
@@ -17,7 +17,8 @@ def home():
 def predict():
     int_features = [float(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
-    prediction = model.predict(final_features)
+    # prediction = model.predict(final_features)
+    prediction = [0.24]
     print(prediction[0])
 
     #output = round(prediction[0], 2)
