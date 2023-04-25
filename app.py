@@ -20,7 +20,7 @@ def predict():
     print(prediction[0])
 
     # output = round(prediction[0], 2)
-    return render_template('home.html', prediction_text="AQI for East Lansing {}".format(prediction[0]))
+    return render_template('home.html', prediction_text="AQI for East Lansingn {}".format(prediction[0]))
 
 
 @app.route('/predict_api', methods=['POST'])
